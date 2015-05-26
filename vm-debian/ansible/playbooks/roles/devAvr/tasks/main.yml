@@ -9,6 +9,10 @@
   apt: name=gcc-avr state=latest
   tags: AVR
 
+- name: Install avr-libc
+  apt: name=avr-libc state=latest
+  tags: AVR
+
 - name: Install gdb-avr debugger
   apt: name=gdb-avr state=latest
   tags: AVR
