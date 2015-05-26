@@ -1,6 +1,10 @@
 ---
 # This playbook will setup the AVR development environment
 
+- name: Install binutils-avr
+  apt: name=binutils-avr state=latest
+  tags: AVR
+
 - name: Install gcc-avr cross-compiler
   apt: name=gcc-avr state=latest
   tags: AVR
