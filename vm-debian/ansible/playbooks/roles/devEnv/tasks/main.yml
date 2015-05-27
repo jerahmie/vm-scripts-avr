@@ -7,7 +7,7 @@
 
 - name: Install make
   apt: name=make state=latest
-  tags: utils
+  tags: dev 
   
 - name: Install gcc
   apt: name=gcc state=latest
@@ -16,10 +16,34 @@
 - name: Install g++
   apt: name=g++ state=latest
   tags: gcc
+
+- name: Install autoconf
+  apt: name=autoconf state=latest
+  tags: dev
+
+- name: Install automake
+  apt: name=automake state=latest
+  tags: dev
+
+- name: Install autotools-dev
+  apt: name=autotools-dev state=latest
+  tags: dev
+
+- name: Install libtool
+  apt: name=libtool state=latest
+  tags: dev
   
 - name: Install gdb
   apt: name=gdb state=latest
   tags: gdb
+
+- name: Install GNU binary utilities
+  apt: name=binutils state=latest
+  tags: dev
+
+- name: Install GNU binary utilities development libraries
+  apt: name=binutils-dev state=latest
+  tags: dev
 
 - name: Install subversion
   apt: name=subversion state=latest
