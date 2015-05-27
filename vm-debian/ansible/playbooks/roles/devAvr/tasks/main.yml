@@ -29,9 +29,9 @@
   apt: name=avrdude-doc state=latest
   tags: AVR
 
-- name: Install AVR simulator
-  apt: name=simulavr state=latest
-  tags: AVR
+#- name: Install AVR simulator
+#  apt: name=simulavr state=latest
+#  tags: AVR
 
 - name: Install flashrom
   apt: name=flashrom state=latest
