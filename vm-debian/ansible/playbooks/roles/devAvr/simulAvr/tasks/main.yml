@@ -1,0 +1,20 @@
+---
+# Download and Install simulavr
+
+- name: Check if simulavr exists
+  stat: path=/usr/local/bin/simulavr
+  register: check_simulavr_path
+
+- name: Create temporary directory
+  command: mktemp -d
+  register: tempdir
+
+- name: Download simulavr from simulavr site
+  get_url: url='http://download.savannah.nongnu.org/releases/simulavr/simulavr-1.0.0-binary-linux32.tar.gz' dest={{ tempdir.stdout }}
+  register: get_simulavr
+  when: check_simulavr_path == false
+
+- name: Extract simulavr to /usr/local/
+  unarchive: src={{ tempdir.stdout }}/simulavr-1.0.0-binary-linux32.tar.gz dest=/
+  when: get_simulavr.stat.exists == true
+

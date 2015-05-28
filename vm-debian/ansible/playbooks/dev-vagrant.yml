@@ -7,4 +7,5 @@
     - base
     - devEnv
     - devAvr
+    - devAvr/simulAvr
     - devCoreboot
