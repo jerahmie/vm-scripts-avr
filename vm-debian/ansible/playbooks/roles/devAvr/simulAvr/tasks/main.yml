@@ -15,6 +15,6 @@
   when: check_simulavr_path.stat.exists == false
 
 - name: Extract simulavr to /usr/local/
-  command: tar xf{{ tempdir.stdout }}/simulavr-1.0.0-binary-linux32.tar.gz -C /
+  command: edho tar xf {{ tempdir.stdout }}/simulavr-1.0.0-binary-linux32.tar.gz -C /
   when: get_simulavr == true
 
