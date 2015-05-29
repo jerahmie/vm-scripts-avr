@@ -16,5 +16,5 @@
 
 - name: Extract simulavr to /usr/local/
   unarchive: src={{ tempdir.stdout }}/simulavr-1.0.0-binary-linux32.tar.gz dest=/
-  when: get_simulavr.stat.exists == true
+  when: get_simulavr == true
 
