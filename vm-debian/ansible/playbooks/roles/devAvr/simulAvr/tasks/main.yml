@@ -8,6 +8,7 @@
 - name: Create temporary directory
   command: mktemp -d
   register: tempdir
+  when: check_simulavr_path.stat.exists == false
 
 - name: Download simulavr from simulavr site
   get_url: url='http://download.savannah.nongnu.org/releases/simulavr/simulavr-1.0.0-binary-linux32.tar.gz' dest={{ tempdir.stdout }}

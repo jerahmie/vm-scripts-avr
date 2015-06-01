@@ -9,3 +9,5 @@
     - devAvr
     - devAvr/simulAvr
     - devCoreboot
+    - devTools/OLS
+
