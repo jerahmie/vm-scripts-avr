@@ -17,7 +17,7 @@
   command: tar xf {{ tempdir.stdout }}/ols-0.9.7.2-full.tar.gz -C /usr/local
   when: check_ols_path.stat.exists == false
 
-- file: path=/usr/local/ols-0.9.7.2 group=vagrant mode=664
+- file: path=/usr/local/ols-0.9.7.2 group=vagrant mode=755
 
 - name: Check for symlink to /usr/local/ols-0.9.7.2/run.sh
   command: ln -s /usr/local/ols-0.9.7.2/run.sh /usr/local/bin/run_ols.sh
