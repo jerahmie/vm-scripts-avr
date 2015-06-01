@@ -10,7 +10,7 @@
   when: check_ols_path.stat.exists == false
 
 - name: Download OLS
-  get_url: url='https://www.lxtreme.nl/ols/ols-0.9.7.2-full.tar.gz' dest={{ tempdir.stdout }}
+  get_url: url='https://www.lxtreme.nl/ols/ols-0.9.7.2-full.tar.gz' dest={{ tempdir.stdout }} validate_certs=no
   when: check_ols_path.stat.exists == false
 
 - name: Extract OLS to /usr/local
