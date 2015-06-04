@@ -5,6 +5,7 @@
       
   roles:
     - base
+    - updateServer
     - devEnv
     - devAvr
     - devAvr/simulAvr
