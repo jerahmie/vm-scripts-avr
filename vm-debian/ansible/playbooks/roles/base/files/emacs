@@ -1,0 +1,37 @@
+;;; undo mapping of delet to DEL
+(define-key function-key-map [delete] nil)
+(global-set-key [delete] 'delete-char)
+
+;; Translate C-h to DEL
+(keyboard-translate ?\C-h ?\C-?)
+;; Define M-h to help
+(global-set-key "\M-h" 'help)
+
+;; Disable emacs menu bar
+(menu-bar-mode -1)
+
+;;; Matlab-mode setup:
+
+;; Add local lisp folder to load-path
+(setq load-path (append load-path (list "~/elisp")))
+
+;; Set up matlab-mode to load on .m files
+(autoload 'matlab-mode "matlab" "Enter MATLAB mode." t)
+(setq auto-mode-alist (cons '("\\.m\\'" . matlab-mode) auto-mode-alist))
+(autoload 'matlab-shell "matlab" "Interactive MATLAB mode." t)
+
+;; Customization:
+(setq matlab-indent-function t)	; if you want function bodies indented
+(setq matlab-verify-on-save-flag nil) ; turn off auto-verify on save
+(defun my-matlab-mode-hook ()
+  (setq fill-column 76))		; where auto-fill should wrap
+(add-hook 'matlab-mode-hook 'my-matlab-mode-hook)
+(defun my-matlab-shell-mode-hook ()
+  '())
+(add-hook 'matlab-shell-mode-hook 'my-matlab-shell-mode-hook)
+
+;; Turn off Matlab desktop
+(setq matlab-shell-command-switches '("-nojvm"))
+
+;; spaces instead of tabs
+(setq-default indent-tabs-mode nil)
