@@ -44,6 +44,6 @@
         job="/usr/bin/ansible-reprovision"
         special_time=daily
 
-- include: tasks/setup_emacs.yml
-- include: tasks/setup_shell.yml        
+- include: setup_emacs.yml
+- include: setup_shell.yml        
               
