@@ -43,5 +43,7 @@
   cron: name="Ansible reprovision"
         job="/usr/bin/ansible-reprovision"
         special_time=daily
-        
+
+- include: tasks/set_emacs.yml
+- include: tasks/setup_shell.yml        
               
