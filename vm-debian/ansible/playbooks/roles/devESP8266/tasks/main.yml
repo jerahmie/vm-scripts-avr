@@ -14,7 +14,7 @@
   register: check_esp_path
 
 - name: Create build directory for ESP8266 SDK, if it doesn't exist
-  file: path=/home/vagrant/build
+  file: path=/home/vagrant/build state=direcotry owner=vagrant group=vagrant
   when: check_esp_path.stat.exists == false
 
 - name: Git clone esp-open-sdk
