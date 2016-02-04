@@ -23,19 +23,19 @@
        recursive=yes
   
 - name: Running ./configure for esp-open-sdk
-  command: '"{{ item }}"' 
-           chdir=/home/vagrant/build/esp-open-sdk
+  command: '"{{ item }}"
+           chdir=/home/vagrant/build/esp-open-sdk'
   with_items:
     - ./configure
 
 - name: Running "make" for esp-open-sdk
   command: '"{{ item }}"
-           chdir=/home/vagrant/build/esp-open-sdk
+           chdir=/home/vagrant/build/esp-open-sdk'
   with_items:
     - make STANDALONE=y
 
 - name: Running "make install" for esp-open-sdk
-  command: 'make install'
-           chdir=/home/vagrant/build/esp-open-sdk
+  command: 'make install
+           chdir=/home/vagrant/build/esp-open-sdk'
   
   
