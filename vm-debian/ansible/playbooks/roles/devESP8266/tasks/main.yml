@@ -21,15 +21,14 @@
   git: repo=https://github.com/pfalcon/esp-open-sdk.git
        dest=/home/vagrant/build/esp-open-sdk
        recursive=yes
-  sudo: no
-  sudo_user: vagrant
+  user: vagrant
   
 - name: Running "make" for esp-open-sdk
   command: '"{{ item }}"
            chdir=/home/vagrant/build/esp-open-sdk'
   with_items:
     - make STANDALONE=y
-  use: vagrant
+  user: vagrant
 
 - name: Running "make install" for esp-open-sdk
   command: 'make install
