@@ -10,7 +10,7 @@
   tags: utils
 
 - name: Install subversion
-  apt: name=subvrsion state=latest
+  apt: name=subversion state=latest
   tags: utils,dev-tools
 
 - name: Install git

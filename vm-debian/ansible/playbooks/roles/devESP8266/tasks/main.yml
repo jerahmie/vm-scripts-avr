@@ -9,4 +9,32 @@
   apt: name=libexpat1-dev state=latest
   tags: dev-libraries
 
+- name: Check if esp build directory exists
+  stat: path=/home/vagrant/build
+  register: check_esp_path
+
+- name: Create build directory for ESP8266 SDK, if it doesn't exist
+  file: path=/home/vagrant/build
+  when: check_esp_path.stat.exists == false
+
+- name: Git clone esp-open-sdk
+  git: repo=https://github.com/pfalcon/esp-open-sdk.git
+       dest=/home/vagrant/build/esp-open-sdk
+       recursive=yes
+  
+- name: Running ./configure for esp-open-sdk
+  command: '"{{ item }}"' 
+           chdir=/home/vagrant/build/esp-open-sdk
+  with_items:
+    - ./configure
+
+- name: Running "make" for esp-open-sdk
+  command: '"{{ item }}"
+           chdir=/home/vagrant/build/esp-open-sdk
+  with_items:
+    - make STANDALONE=y
+
+- name: Running "make install" for esp-open-sdk
+
+  
   
