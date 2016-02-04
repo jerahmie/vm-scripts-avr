@@ -30,11 +30,11 @@
   tags: dev-tools
 
 - name: Install flex
-  apt: name-flex state=latest
+  apt: name=flex state=latest
   tags: dev-tools
 
 - name: Install gawk
-  apt: gawk state=latest
+  apt: name=gawk state=latest
   tags: dev-tools
 
 - name: Install build-essential

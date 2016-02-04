@@ -35,6 +35,6 @@
     - make STANDALONE=y
 
 - name: Running "make install" for esp-open-sdk
-
+  command: '
   
   
