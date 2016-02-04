@@ -5,9 +5,53 @@
   apt: name=unzip state=latest
   tags: utils
 
+- name: Install unrar
+  apt: name=unrar state=latest
+  tags: utils
+
+- name: Install subversion
+  apt: name=subvrsion state=latest
+  tags: utils,dev-tools
+
+- name: Install git
+  apt: name=git state=latest
+  tags: utils, dev-tools
+
+- name: Install sed
+  apt: name=git state=latest
+  tags: utils
+
+- name: Install gperf hash function generator
+  apt: name=gperf state=latest
+  tags: dev-tools
+
+- name: Install bison
+  apt: name=bison state=latest
+  tags: dev-tools
+
+- name: Install flex
+  apt: name-flex state=latest
+  tags: dev-tools
+
+- name: Install gawk
+  apt: gawk state=latest
+  tags: dev-tools
+
+- name: Install build-essential
+  apt: name=build-essential state=latest
+  tags: dev-tools
+
+- name: Install ncurses-dev
+  apt: name=ncurses-dev state=latest
+  tags: dev-libraries
+
+- name: Install texinfo
+  apt: name=texinfo state=latest
+  tags: dev-tools
+
 - name: Install make
   apt: name=make state=latest
-  tags: dev 
+  tags: dev-tools 
   
 - name: Install gcc
   apt: name=gcc state=latest
@@ -19,19 +63,19 @@
 
 - name: Install autoconf
   apt: name=autoconf state=latest
-  tags: dev
+  tags: dev-tools
 
 - name: Install automake
   apt: name=automake state=latest
-  tags: dev
+  tags: dev-tools
 
 - name: Install autotools-dev
   apt: name=autotools-dev state=latest
-  tags: dev
+  tags: dev-libraries
 
 - name: Install libtool
   apt: name=libtool state=latest
-  tags: dev
+  tags: dev-tools
   
 - name: Install gdb
   apt: name=gdb state=latest
@@ -39,28 +83,28 @@
 
 - name: Install GNU binary utilities
   apt: name=binutils state=latest
-  tags: dev
+  tags: dev-tools
 
 - name: Install GNU binary utilities development libraries
   apt: name=binutils-dev state=latest
-  tags: dev
+  tags: dev-tools
 
 - name: Install java 1.7 runtime 
   apt: name=openjdk-7-jre state=latest
   tags: dev
 
-- name: Install subversion
-  apt: name=subversion state=latest
-  tags: utils
+- name: Install python
+  apt: name=python state=latest
+  tags: python
   
 - name: Install emacs
   apt: name=emacs state=latest
   tags: editors
 
-- name: Install install emacs dictionary
+- name: Install emacs dictionary
   apt: name=hunspell state=latest
   tags: editors
   
-- name: Install install emacs dictionary
+- name: Install emacs dictionary
   apt: name=hunspell-en-us state=latest
   tags: editors  
