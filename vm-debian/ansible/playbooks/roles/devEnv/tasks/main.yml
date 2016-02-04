@@ -6,7 +6,7 @@
   tags: utils
 
 - name: Install unrar
-  apt: name=unrar state=latest
+  apt: name=unrar-free state=latest
   tags: utils
 
 - name: Install subversion
