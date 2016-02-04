@@ -35,6 +35,7 @@
     - make STANDALONE=y
 
 - name: Running "make install" for esp-open-sdk
-  command: '
+  command: 'make install'
+           chdir=/home/vagrant/build/esp-open-sdk
   
   

@@ -11,4 +11,4 @@
     - devAvr/simulAvr
     - devCoreboot
     - devTools/OLS
-
+    - devESP8266
