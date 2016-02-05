@@ -21,7 +21,7 @@
   git: repo=https://github.com/pfalcon/esp-open-sdk.git
        dest=/home/vagrant/build/esp-open-sdk
        recursive=yes
-  remote_user: vagrant
+  sudo_user: vagrant
   
 - name: Running "make" for esp-open-sdk
   command: '"{{ item }}"
