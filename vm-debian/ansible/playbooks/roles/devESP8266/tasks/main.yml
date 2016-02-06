@@ -10,29 +10,25 @@
   tags: dev-libraries
 
 - name: Check if esp build directory exists
-  stat: path=/home/vagrant/build
+  stat: path=/root/build
   register: check_esp_path
 
 - name: Create build directory for ESP8266 SDK, if it doesn't exist
-  file: path=/home/vagrant/build state=directory owner=vagrant group=vagrant
+  file: path=/root/build state=directory owner=vagrant group=vagrant
   when: check_esp_path.stat.exists == false
 
 - name: Git clone esp-open-sdk
   git: repo=https://github.com/pfalcon/esp-open-sdk.git
-       dest=/home/vagrant/build/esp-open-sdk
+       dest=/root/build/esp-open-sdk
        recursive=yes
-  sudo_user: vagrant
-  
+
 - name: Running "make" for esp-open-sdk
   command: '"{{ item }}"
-           chdir=/home/vagrant/build/esp-open-sdk'
+           chdir=/root/build/esp-open-sdk'
   with_items:
     - make STANDALONE=y
-  remote_user: vagrant
 
 - name: Running "make install" for esp-open-sdk
   command: 'make install
-           chdir=/home/vagrant/build/esp-open-sdk'
-  sudo: yes
-  sudo_user: vagrant  
+           chdir=/root/build/esp-open-sdk'
   
