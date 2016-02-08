@@ -22,18 +22,18 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # set LIBRARY_PATH and LD_LIBRARY_PATH
-if [ -d "/usr/local/lib" ]; then
-    if [ -z "$LIBRARY_PATH" ]; then
-	LIBRARY_PATH=/usr/local/lib
-    else
-	LIBRARY_PATH=/usr/local/lib:$LIBRARY_PATH
-    fi
-    if [ -z "$LD_LIBRARY_PATH" ]; then
-	LD_LIBRARY_PATH=/usr/local/lib
-    else
-	LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-    fi
-fi    
+#if [ -d "/usr/local/lib" ]; then
+#    if [ -z "$LIBRARY_PATH" ]; then
+#	LIBRARY_PATH=/usr/local/lib
+#    else
+#	LIBRARY_PATH=/usr/local/lib:$LIBRARY_PATH
+#    fi
+#    if [ -z "$LD_LIBRARY_PATH" ]; then
+#	LD_LIBRARY_PATH=/usr/local/lib
+#    else
+#	LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+#    fi
+#fi    
 
 export LIBRARY_PATH
 export LD_LIBRARY_PATH

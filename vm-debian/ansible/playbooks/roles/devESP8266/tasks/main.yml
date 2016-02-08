@@ -30,4 +30,8 @@
            chdir=/home/vagrant/build/esp-open-sdk'
   with_items:
     - make STANDALONE=y
-
+  environment: 
+    LD_LIBRARY_PATH: "''"
+    LIBRARY_PATH: "''"
+    INCLUDE_PATH: "/usr/include/i386-linux-gnu/bits"
+ 
