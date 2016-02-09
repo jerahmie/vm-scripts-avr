@@ -35,4 +35,4 @@
 #    LIBRARY_PATH: "''"
 
 - name: Update path to include xtensa-lx106-elf/bin
-  lineinfile: dest=/home/vagrant/.profile backrefs=yes regexp='(\s*PATH=\"?(.*)):\$PATH\"?' line='\1:/home/vagrant/build/esp-open-sdk/xtensa-lx106-elf/bin:$PATH\"'
+  lineinfile: dest=/home/vagrant/.profile backrefs=yes regexp='(\s*PATH=\"?(.*)):\$PATH\"?' line='\1:/home/vagrant/build/esp-open-sdk/xtensa-lx106-elf/bin:$PATH"'
