@@ -35,5 +35,6 @@ fi
 #    fi
 #fi    
 
+export PATH
 export LIBRARY_PATH
 export LD_LIBRARY_PATH
