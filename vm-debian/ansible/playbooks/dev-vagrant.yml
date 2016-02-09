@@ -4,12 +4,12 @@
   sudo: true
       
   roles:
-#    - base
-#    - updateServer
-#    - devEnv
-#    - devAvr
-#    - devAvr/simulAvr
-#    - devCoreboot
-#    - devTools/OLS
+    - base
+    - updateServer
+    - devEnv
+    - devAvr
+    - devAvr/simulAvr
+    - devCoreboot
+    - devTools/OLS
     - devESP8266
 
