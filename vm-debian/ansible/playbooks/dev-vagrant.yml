@@ -7,7 +7,9 @@
     - base
     - updateServer
     - devEnv
-#    - devAvr
-#    - devAvr/simulAvr
+    - devAvr
+    - devAvr/simulAvr
 #    - devCoreboot
 #    - devTools/OLS
+    - devESP8266
+
