@@ -21,9 +21,9 @@
   apt: name=git state=latest
   tags: utils
 
-- name: Install gperf hash function generator
-  apt: name=gperf state=latest
-  tags: dev-tools
+  #- name: Install gperf hash function generator
+  #apt: name=gperf state=latest
+  #tags: dev-tools
 
 - name: Install bison
   apt: name=bison state=latest
