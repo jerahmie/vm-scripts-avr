@@ -37,13 +37,13 @@
   apt: name=gawk state=latest
   tags: dev-tools
 
-- name: Install libtinfo5
-  apt: name=libtinfo5 state=latest
-  tags: dev-libraries
-
-- name: Install ncurses-dev
-  apt: name=ncurses-dev state=latest
-  tags: dev-libraries
+#- name: Install libtinfo5
+#  apt: name=libtinfo5 state=latest
+#  tags: dev-libraries
+#
+#- name: Install ncurses-dev
+#  apt: name=ncurses-dev state=latest
+#  tags: dev-libraries
 
 - name: Install texinfo
   apt: name=texinfo state=latest
