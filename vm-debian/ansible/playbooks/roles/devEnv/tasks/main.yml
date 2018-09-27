@@ -37,10 +37,6 @@
   apt: name=gawk state=latest
   tags: dev-tools
 
-- name: Install build-essential
-  apt: name=build-essential state=latest
-  tags: dev-tools
-
 - name: Install ncurses-dev
   apt: name=ncurses-dev state=latest
   tags: dev-libraries
@@ -96,6 +92,10 @@
 - name: Install python
   apt: name=python state=latest
   tags: python
+
+- name: Install build-essential
+  apt: name=build-essential state=latest
+  tags: dev-tools
   
 - name: Install emacs
   apt: name=emacs state=latest
