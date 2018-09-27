@@ -45,70 +45,70 @@
 #  apt: name=ncurses-dev state=latest
 #  tags: dev-libraries
 
-- name: Install texinfo
-  apt: name=texinfo state=latest
-  tags: dev-tools
-
-- name: Install make
-  apt: name=make state=latest
-  tags: dev-tools 
-  
-- name: Install gcc
-  apt: name=gcc state=latest
-  tags: gcc 
-
-- name: Install g++
-  apt: name=g++ state=latest
-  tags: gcc
-
-- name: Install autoconf
-  apt: name=autoconf state=latest
-  tags: dev-tools
-
-- name: Install automake
-  apt: name=automake state=latest
-  tags: dev-tools
-
-- name: Install autotools-dev
-  apt: name=autotools-dev state=latest
-  tags: dev-libraries
-
-- name: Install libtool
-  apt: name=libtool state=latest
-  tags: dev-tools
-  
-- name: Install gdb
-  apt: name=gdb state=latest
-  tags: gdb
-
-- name: Install GNU binary utilities
-  apt: name=binutils state=latest
-  tags: dev-tools
-
-- name: Install GNU binary utilities development libraries
-  apt: name=binutils-dev state=latest
-  tags: dev-tools
-
-- name: Install java 1.7 runtime 
-  apt: name=openjdk-7-jre state=latest
-  tags: dev
-
-- name: Install python
-  apt: name=python state=latest
-  tags: python
-
-- name: Install build-essential
-  apt: name=build-essential state=latest
-  tags: dev-tools
-  
-- name: Install emacs
-  apt: name=emacs state=latest
-  tags: editors
-
-- name: Install emacs dictionary
-  apt: name=hunspell state=latest
-  tags: editors
-  
-- name: Install emacs dictionary
-  apt: name=hunspell-en-us state=latest
-  tags: editors  
+#- name: Install texinfo
+#  apt: name=texinfo state=latest
+#  tags: dev-tools
+#
+#- name: Install make
+#  apt: name=make state=latest
+#  tags: dev-tools 
+#  
+#- name: Install gcc
+#  apt: name=gcc state=latest
+#  tags: gcc 
+#
+#- name: Install g++
+#  apt: name=g++ state=latest
+#  tags: gcc
+#
+#- name: Install autoconf
+#  apt: name=autoconf state=latest
+#  tags: dev-tools
+#
+#- name: Install automake
+#  apt: name=automake state=latest
+#  tags: dev-tools
+#
+#- name: Install autotools-dev
+#  apt: name=autotools-dev state=latest
+#  tags: dev-libraries
+#
+#- name: Install libtool
+#  apt: name=libtool state=latest
+#  tags: dev-tools
+#  
+#- name: Install gdb
+#  apt: name=gdb state=latest
+#  tags: gdb
+#
+#- name: Install GNU binary utilities
+#  apt: name=binutils state=latest
+#  tags: dev-tools
+#
+#- name: Install GNU binary utilities development libraries
+#  apt: name=binutils-dev state=latest
+#  tags: dev-tools
+#
+#- name: Install java 1.7 runtime 
+#  apt: name=openjdk-7-jre state=latest
+#  tags: dev
+#
+#- name: Install python
+#  apt: name=python state=latest
+#  tags: python
+#
+#- name: Install build-essential
+#  apt: name=build-essential state=latest
+#  tags: dev-tools
+#  
+#- name: Install emacs
+#  apt: name=emacs state=latest
+#  tags: editors
+#
+#- name: Install emacs dictionary
+#  apt: name=hunspell state=latest
+#  tags: editors
+#  
+#- name: Install emacs dictionary
+#  apt: name=hunspell-en-us state=latest
+#  tags: editors  
