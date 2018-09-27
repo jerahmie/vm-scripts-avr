@@ -38,7 +38,7 @@
   tags: dev-tools
 
 - name: Install ncurses-dev
-  apt: name=ncurses-dev state=latest
+  apt: name=ncurses-dev state=build-dep
   tags: dev-libraries
 
 - name: Install texinfo
